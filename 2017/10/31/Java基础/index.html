@@ -20,7 +20,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" , user-scalable="no"">
-  <title>Hello WorldYoungTakhin</title>
+  <title>一.Java 基础YoungTakhin</title>
   <link rel="shortcut icon" href>
   
     
@@ -109,12 +109,18 @@
             </header>
                 
 <header class="blog-post-page-title">
-    <h4>Hello World</h4>
-    <time datetime="2019-09-15T07:03:25.377Z"><i class="fa fa-clock-o"></i>2019-09-15</time>
+    <h4>一.Java 基础</h4>
+    <time datetime="2017-10-31T12:38:17.000Z"><i class="fa fa-clock-o"></i>2017-10-31</time>
     
     
     
     
+	
+        <span><i class="fa fa-folder-o"></i>
+    		
+    	       <a href="/yangdexuan.github.io/categories/Java题目/" rel="categories" data-toggle="tooltip" data-placement="top" title="Linux">Java题目</a>
+    		
+        </span>
 	
     
 </header>
@@ -122,24 +128,20 @@
     <article class="blog-post-block blog-post-page-content">
         <section>
             
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="一-Java基础"><a href="#一-Java基础" class="headerlink" title="一. Java基础"></a>一. Java基础</h1><h2 id="JDK-和-JRE-有什么区别？"><a href="#JDK-和-JRE-有什么区别？" class="headerlink" title="JDK 和 JRE 有什么区别？"></a>JDK 和 JRE 有什么区别？</h2><ul>
+<li>JDK：Java Development Kit 的简称，java 开发工具包，提供了 java 的开发环境和运行环境。</li>
+<li>JRE：Java Runtime Environment 的简称，java 运行环境，为 java 的运行提供了所需环境。</li>
+</ul>
+<p>具体来说 JDK 其实包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具。简单来说：如果你需要运行 java 程序，只需安装 JRE 就可以了，如果你需要编写 java 程序，需要安装 JDK。</p>
 
             
         </section>
         <footer class="blog-post-page-tags">
         
+			
+				
+			<a href="/yangdexuan.github.io/tags/Java/" rel="tag" data-toggle="tooltip" data-placement="top" title="Linux">Java</a>
+				
 			
 		
         </footer>
@@ -148,10 +150,10 @@
     	
     	
 		
+			<a href="/yangdexuan.github.io/2019/09/15/hello-world/" class="blog-post-page-readmore-prev" data-toggle="tooltip" data-placement="top" title="Hello World">上一篇</a>
+		
 
 		
-		
-			<a href="/yangdexuan.github.io/2017/10/31/Java基础/" class="blog-post-page-readmore-next" data-toggle="tooltip" data-placement="top" title="一.Java 基础">下一篇</a>
 		
 
         <div style="clear: both;"></div>
@@ -254,7 +256,7 @@
                 return out;
             }
             // 生成
-            var qrcode= $('.post-qrcode-content-canvas').qrcode({width: 150,height: 150,text: toUtf8("http://youngtakhin.github.io/yangdexuan.github.io/2019/09/15/hello-world/")}).hide();
+            var qrcode= $('.post-qrcode-content-canvas').qrcode({width: 150,height: 150,text: toUtf8("http://youngtakhin.github.io/yangdexuan.github.io/2017/10/31/Java基础/")}).hide();
             var canvas=qrcode.find('canvas').get(0);
             $('.post-qrcode-content-img').attr('src',canvas.toDataURL('image/jpg'));
         </script>
