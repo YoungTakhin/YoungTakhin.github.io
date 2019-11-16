@@ -1,35 +1,37 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
 <meta charset="utf-8">
 <title>五. 对象拷贝 - YoungTakhin</title>
 <base href="/youngtakhin.github.io/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="https://youngtakhin.github.io/youngtakhin.github.io/2019/09/27/五-对象拷贝/">
+<link rel="canonical" href="https://youngtakhin.github.io/youngtakhin.github.io/2019/09/27/%E4%BA%94-%E5%AF%B9%E8%B1%A1%E6%8B%B7%E8%B4%9D/">
 <link rel="icon" type="image/x-icon" href="/youngtakhin.github.io/favicon.ico">
+
 <meta name="description" content="五. 对象拷贝61. 为什么要使用克隆？想对一个对象进行处理，又想保留原有的数据进行接下来的操作，就需要克隆了，Java语言中克隆针对的是类的实例。 62. 如何实现对象克隆？有两种方式： 1). 实现Cloneable接口并重写Object类中的clone()方法； 2). 实现Serializable接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆，代码如下： 12345678">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="website">
 <meta property="og:title" content="五. 对象拷贝">
-<meta property="og:url" content="https://youngtakhin.github.io/youngtakhin.github.io/2019/09/27/五-对象拷贝/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;youngtakhin.github.io&#x2F;youngtakhin.github.io&#x2F;2019&#x2F;09&#x2F;27&#x2F;%E4%BA%94-%E5%AF%B9%E8%B1%A1%E6%8B%B7%E8%B4%9D&#x2F;index.html">
 <meta property="og:site_name" content="YoungTakhin">
 <meta property="og:description" content="五. 对象拷贝61. 为什么要使用克隆？想对一个对象进行处理，又想保留原有的数据进行接下来的操作，就需要克隆了，Java语言中克隆针对的是类的实例。 62. 如何实现对象克隆？有两种方式： 1). 实现Cloneable接口并重写Object类中的clone()方法； 2). 实现Serializable接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆，代码如下： 12345678">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 <meta property="og:updated_time" content="2019-09-27T03:44:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="五. 对象拷贝">
-<meta name="twitter:description" content="五. 对象拷贝61. 为什么要使用克隆？想对一个对象进行处理，又想保留原有的数据进行接下来的操作，就需要克隆了，Java语言中克隆针对的是类的实例。 62. 如何实现对象克隆？有两种方式： 1). 实现Cloneable接口并重写Object类中的clone()方法； 2). 实现Serializable接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆，代码如下： 12345678">
-<meta name="twitter:image" content="https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+
+
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
-<link href="/youngtakhin.github.io/styles.e987407a0a9d77c7ba00.css" rel="stylesheet">
-<link rel="stylesheet" href="/youngtakhin.github.io/theme.6ede6e7efc644436e391.css">
-<script src="/youngtakhin.github.io/config.81b664aa9a325f7977f6.js"></script>
+<link href="/youngtakhin.github.io/styles.6d727dade1159bc77736.css" rel="stylesheet">
+<link rel="stylesheet" href="/youngtakhin.github.io/theme.2ad31e0fe8b2db292451.css">
+<script src="/youngtakhin.github.io/config.e6e48dc5d1adee7add23.js"></script>
+
 </head>
 <body lang="zh-Hans">
 <is-a></is-a>
-<script src="/youngtakhin.github.io/runtime.caef73fae70e33459c5a.js"></script>
-<script src="/youngtakhin.github.io/polyfills.28555e618578fe61f50a.js"></script>
-<script src="/youngtakhin.github.io/main.5f57ed8aacba80770b83.zh-Hans.js"></script>
+<script src="/youngtakhin.github.io/runtime.ee6f73bc31187f12810a.js"></script>
+<script src="/youngtakhin.github.io/polyfills.14df1390f4da8e838f05.js"></script>
+<script src="/youngtakhin.github.io/main.0c926d87f8cb6ab96db0.js"></script>
 </body>
 </html>
