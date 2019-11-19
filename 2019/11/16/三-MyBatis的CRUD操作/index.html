@@ -2,32 +2,32 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<title>三. MyBatis的CRUD操作 - YoungTakhin</title>
+<title>三. MyBatis基于XML的CRUD操作 - YoungTakhin</title>
 <base href="/youngtakhin.github.io/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="https://youngtakhin.github.io/youngtakhin.github.io/2019/11/16/%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/">
 <link rel="icon" type="image/x-icon" href="/youngtakhin.github.io/favicon.ico">
 
-<meta name="description" content="三. MyBatis的CRUD操作基于代理dao实现CRUD操作使用要求：  持久层接口和持久层接口的映射配置必须在相同的包下； 持久层映射配置中 mapper 标签的 namespace 属性取值必须是持久层接口的全限定类名； SQL 语句的配置标签 &amp;lt;select&amp;gt;、&amp;lt;insert&amp;gt;、&amp;lt;delete&amp;gt;、&amp;lt;update&amp;gt; 的 id 属性必须和持久层">
+<meta name="description" content="三. MyBatis基于XML的CRUD操作基于代理dao实现CRUD操作使用要求：  持久层接口和持久层接口的映射配置必须在相同的包下； 持久层映射配置中 mapper 标签的 namespace 属性取值必须是持久层接口的全限定类名； SQL 语句的配置标签 &amp;lt;select&amp;gt;、&amp;lt;insert&amp;gt;、&amp;lt;delete&amp;gt;、&amp;lt;update&amp;gt; 的 id 属性必">
 <meta name="keywords" content="Java,MyBatis">
 <meta property="og:type" content="website">
-<meta property="og:title" content="三. MyBatis的CRUD操作">
+<meta property="og:title" content="三. MyBatis基于XML的CRUD操作">
 <meta property="og:url" content="https:&#x2F;&#x2F;youngtakhin.github.io&#x2F;youngtakhin.github.io&#x2F;2019&#x2F;11&#x2F;16&#x2F;%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C&#x2F;index.html">
 <meta property="og:site_name" content="YoungTakhin">
-<meta property="og:description" content="三. MyBatis的CRUD操作基于代理dao实现CRUD操作使用要求：  持久层接口和持久层接口的映射配置必须在相同的包下； 持久层映射配置中 mapper 标签的 namespace 属性取值必须是持久层接口的全限定类名； SQL 语句的配置标签 &amp;lt;select&amp;gt;、&amp;lt;insert&amp;gt;、&amp;lt;delete&amp;gt;、&amp;lt;update&amp;gt; 的 id 属性必须和持久层">
+<meta property="og:description" content="三. MyBatis基于XML的CRUD操作基于代理dao实现CRUD操作使用要求：  持久层接口和持久层接口的映射配置必须在相同的包下； 持久层映射配置中 mapper 标签的 namespace 属性取值必须是持久层接口的全限定类名； SQL 语句的配置标签 &amp;lt;select&amp;gt;、&amp;lt;insert&amp;gt;、&amp;lt;delete&amp;gt;、&amp;lt;update&amp;gt; 的 id 属性必">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
-<meta property="og:updated_time" content="2019-11-18T08:44:17.046Z">
+<meta property="og:updated_time" content="2019-11-19T05:56:13.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"https://youngtakhin.github.io/youngtakhin.github.io","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"MyBatis","url":"https://youngtakhin.github.io/youngtakhin.github.io/2019/11/16/%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/","headline":"三. MyBatis的CRUD操作","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-16T15:29:39.000Z","dateModified":"2019-11-18T08:44:17.046Z","keywords":"Java,MyBatis","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://youngtakhin.github.io/youngtakhin.github.io/2019/11/16/%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"https://youngtakhin.github.io/youngtakhin.github.io","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"MyBatis","url":"https://youngtakhin.github.io/youngtakhin.github.io/2019/11/16/%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/","headline":"三. MyBatis基于XML的CRUD操作","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-16T15:29:39.000Z","dateModified":"2019-11-19T05:56:13.364Z","keywords":"Java,MyBatis","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://youngtakhin.github.io/youngtakhin.github.io/2019/11/16/%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/youngtakhin.github.io/styles.6d727dade1159bc77736.css" rel="stylesheet">
 <link rel="stylesheet" href="/youngtakhin.github.io/theme.e4c4a1b4ae75e9d1a040.css">
-<script src="/youngtakhin.github.io/config.db3492670a662a139972.js"></script>
+<script src="/youngtakhin.github.io/config.b8e2bba3df7678367bd6.js"></script>
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
