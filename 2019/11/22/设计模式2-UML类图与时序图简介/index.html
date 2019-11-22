@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>设计模式2. UML类图与时序图简介 - YoungTakhin</title>
+<base href="/youngtakhin.github.io/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://youngtakhin.github.io/youngtakhin.github.io/2019/11/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-UML%E7%B1%BB%E5%9B%BE%E4%B8%8E%E6%97%B6%E5%BA%8F%E5%9B%BE%E7%AE%80%E4%BB%8B/">
+<link rel="icon" type="image/x-icon" href="/youngtakhin.github.io/favicon.ico">
+
+<meta name="description" content="设计模式2. UML类图与时序图简介类图示例请看以下这个类图，类之间的关系是我们需要关注的：   车的类图结构为&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;，表示车是一个抽象类； 其他的类为实体类。  类间关系 继承关系：类的继承结构表现在UML中为：泛化与实现： 继承关系为 is-a 的关系，两个对象之间如果可以用 is-a 来表示，就是继承关系；  实现关系（realize）：车有两个继承">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="website">
+<meta property="og:title" content="设计模式2. UML类图与时序图简介">
+<meta property="og:url" content="https:&#x2F;&#x2F;youngtakhin.github.io&#x2F;youngtakhin.github.io&#x2F;2019&#x2F;11&#x2F;22&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-UML%E7%B1%BB%E5%9B%BE%E4%B8%8E%E6%97%B6%E5%BA%8F%E5%9B%BE%E7%AE%80%E4%BB%8B&#x2F;index.html">
+<meta property="og:site_name" content="YoungTakhin">
+<meta property="og:description" content="设计模式2. UML类图与时序图简介类图示例请看以下这个类图，类之间的关系是我们需要关注的：   车的类图结构为&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;，表示车是一个抽象类； 其他的类为实体类。  类间关系 继承关系：类的继承结构表现在UML中为：泛化与实现： 继承关系为 is-a 的关系，两个对象之间如果可以用 is-a 来表示，就是继承关系；  实现关系（realize）：车有两个继承">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+<meta property="og:updated_time" content="2019-11-22T09:02:43.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"https://youngtakhin.github.io/youngtakhin.github.io","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"设计模式","url":"https://youngtakhin.github.io/youngtakhin.github.io/2019/11/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-UML%E7%B1%BB%E5%9B%BE%E4%B8%8E%E6%97%B6%E5%BA%8F%E5%9B%BE%E7%AE%80%E4%BB%8B/","headline":"设计模式2. UML类图与时序图简介","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-22T06:34:45.000Z","dateModified":"2019-11-22T09:02:43.374Z","keywords":"设计模式","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://youngtakhin.github.io/youngtakhin.github.io/2019/11/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-UML%E7%B1%BB%E5%9B%BE%E4%B8%8E%E6%97%B6%E5%BA%8F%E5%9B%BE%E7%AE%80%E4%BB%8B/"}}]</script>
+
+
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="/youngtakhin.github.io/styles.6d727dade1159bc77736.css" rel="stylesheet">
+<link rel="stylesheet" href="/youngtakhin.github.io/theme.e4c4a1b4ae75e9d1a040.css">
+<script src="/youngtakhin.github.io/config.e36b01016f3a4a368482.js"></script>
+
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
+
+</head>
+<body lang="zh-Hans">
+<is-a></is-a>
+<script src="/youngtakhin.github.io/runtime.ee6f73bc31187f12810a.js"></script>
+<script src="/youngtakhin.github.io/polyfills.14df1390f4da8e838f05.js"></script>
+<script src="/youngtakhin.github.io/main.0c926d87f8cb6ab96db0.js"></script>
+</body>
+</html>
