@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>设计模式5 工厂方法模式 - YoungTakhin</title>
+<base href="/youngtakhin.github.io/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://youngtakhin.github.io/youngtakhin.github.io/2019/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+<link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
+
+<meta name="description" content="设计模式5 工厂方法模式工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual Constructor)模式或者多态工厂(Polymorphic Factory)模式，它是一种类创建型模式。 工厂方法模式定义定义一个创建产品对象的工厂接口，将产品对象的实际创建工作推迟到具体子工厂类当中。这满足创建型模式中所要求的“创建与使用相分离”的特点。我们把">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="website">
+<meta property="og:title" content="设计模式5 工厂方法模式">
+<meta property="og:url" content="https:&#x2F;&#x2F;youngtakhin.github.io&#x2F;youngtakhin.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F&#x2F;index.html">
+<meta property="og:site_name" content="YoungTakhin">
+<meta property="og:description" content="设计模式5 工厂方法模式工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual Constructor)模式或者多态工厂(Polymorphic Factory)模式，它是一种类创建型模式。 工厂方法模式定义定义一个创建产品对象的工厂接口，将产品对象的实际创建工作推迟到具体子工厂类当中。这满足创建型模式中所要求的“创建与使用相分离”的特点。我们把">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+<meta property="og:updated_time" content="2019-12-02T07:29:39.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"https://youngtakhin.github.io/youngtakhin.github.io","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"设计模式","url":"https://youngtakhin.github.io/youngtakhin.github.io/2019/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/","headline":"设计模式5 工厂方法模式","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-02T05:57:36.000Z","dateModified":"2019-12-02T07:29:39.396Z","keywords":"设计模式","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://youngtakhin.github.io/youngtakhin.github.io/2019/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"}}]</script>
+
+
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="/youngtakhin.github.io/styles.6d727dade1159bc77736.css" rel="stylesheet">
+<link rel="stylesheet" href="/youngtakhin.github.io/theme.ec8485c7ddbd320e63bb.css">
+<script src="/youngtakhin.github.io/config.13b8965271c04c58bbc0.js"></script>
+
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
+
+</head>
+<body lang="zh-Hans">
+<is-a></is-a>
+<script src="/youngtakhin.github.io/runtime.ee6f73bc31187f12810a.js"></script>
+<script src="/youngtakhin.github.io/polyfills.14df1390f4da8e838f05.js"></script>
+<script src="/youngtakhin.github.io/main.0c926d87f8cb6ab96db0.js"></script>
+</body>
+</html>
