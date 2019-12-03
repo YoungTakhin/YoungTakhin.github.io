@@ -5,14 +5,14 @@
 <title>设计模式4 原型模式 - YoungTakhin</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="https://youngtakhin.github.io/2019/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+<link rel="canonical" href="https://alpac.top/2019/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
 <link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
 
 <meta name="description" content="设计模式4 原型模式原型模式（Prototype Pattern）是一种对象创建型模式。 原型模式定义原型模式实现了一个原型接口，并用其实例作为原型，通过克隆该原型对象来创建一个和原型相同或相似的新对象。原型实例指定了要创建的对象的种类。用这种方式创建对象非常高效，根本无须知道对象创建的细节。 原型模式结构 原型模式主要包括以下主要角色：  原型接口&#x2F;抽象原型类 具体原型类 访问类   原型模式类">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="website">
 <meta property="og:title" content="设计模式4 原型模式">
-<meta property="og:url" content="https:&#x2F;&#x2F;youngtakhin.github.io&#x2F;2019&#x2F;11&#x2F;28&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;alpac.top&#x2F;2019&#x2F;11&#x2F;28&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F&#x2F;index.html">
 <meta property="og:site_name" content="YoungTakhin">
 <meta property="og:description" content="设计模式4 原型模式原型模式（Prototype Pattern）是一种对象创建型模式。 原型模式定义原型模式实现了一个原型接口，并用其实例作为原型，通过克隆该原型对象来创建一个和原型相同或相似的新对象。原型实例指定了要创建的对象的种类。用这种方式创建对象非常高效，根本无须知道对象创建的细节。 原型模式结构 原型模式主要包括以下主要角色：  原型接口&#x2F;抽象原型类 具体原型类 访问类   原型模式类">
 <meta property="og:locale" content="zh-Hans">
@@ -21,13 +21,13 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"https://youngtakhin.github.io","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"设计模式","url":"https://youngtakhin.github.io/2019/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/","headline":"设计模式4 原型模式","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-28T08:32:46.000Z","dateModified":"2019-12-03T08:03:04.699Z","keywords":"设计模式","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://youngtakhin.github.io/2019/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"https://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"设计模式","url":"https://alpac.top/2019/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/","headline":"设计模式4 原型模式","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-28T08:32:46.000Z","dateModified":"2019-12-03T08:03:04.699Z","keywords":"设计模式","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://alpac.top/2019/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Fira+Code|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.6d727dade1159bc77736.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.8d4584423fa088e66b01.css">
-<script src="/config.c53a11eacc95d360d086.js"></script>
+<script src="/config.d80fd0a4c1c65edcb9cb.js"></script>
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
