@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>MyBatis框架入门三. MyBatis基于XML的CRUD操作 - YoungTakhin</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://alpac.top/MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/">
+<link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
+
+<meta name="description" content="MyBatis框架入门三. MyBatis基于XML的CRUD操作基于代理dao实现CRUD操作使用要求：  持久层接口和持久层接口的映射配置必须在相同的包下； 持久层映射配置中 mapper 标签的 namespace 属性取值必须是持久层接口的全限定类名； SQL 语句的配置标签 &amp;lt;select&amp;gt;、&amp;lt;insert&amp;gt;、&amp;lt;delete&amp;gt;、&amp;lt;update&amp;g">
+<meta name="keywords" content="Java,MyBatis">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MyBatis框架入门三. MyBatis基于XML的CRUD操作">
+<meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C&#x2F;index.html">
+<meta property="og:site_name" content="YoungTakhin">
+<meta property="og:description" content="MyBatis框架入门三. MyBatis基于XML的CRUD操作基于代理dao实现CRUD操作使用要求：  持久层接口和持久层接口的映射配置必须在相同的包下； 持久层映射配置中 mapper 标签的 namespace 属性取值必须是持久层接口的全限定类名； SQL 语句的配置标签 &amp;lt;select&amp;gt;、&amp;lt;insert&amp;gt;、&amp;lt;delete&amp;gt;、&amp;lt;update&amp;g">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+<meta property="og:updated_time" content="2019-12-03T11:04:16.080Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"MyBatis","url":"http://alpac.top/MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/","headline":"MyBatis框架入门三. MyBatis基于XML的CRUD操作","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-16T15:29:39.000Z","dateModified":"2019-12-03T11:04:16.080Z","keywords":"Java,MyBatis","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%B8%89-MyBatis%E7%9A%84CRUD%E6%93%8D%E4%BD%9C/"}}]</script>
+
+
+<link href="//fonts.googleapis.com/css?family=Fira+Code|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="/styles.6d727dade1159bc77736.css" rel="stylesheet">
+<link rel="stylesheet" href="/theme.8d4584423fa088e66b01.css">
+<script src="/config.fb75470201b0c48e7440.js"></script>
+
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
+
+
+<meta name="baidu-site-verification" content="sK3E1kllSJ" />
+
+</head>
+<body lang="zh-Hans">
+<is-a></is-a>
+<script src="/runtime.ee6f73bc31187f12810a.js"></script>
+<script src="/polyfills.14df1390f4da8e838f05.js"></script>
+<script src="/main.0c926d87f8cb6ab96db0.js"></script>
+</body>
+</html>

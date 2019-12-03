@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>MyBatis框架入门五. MyBatis事务 - YoungTakhin</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://alpac.top/MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%BA%94-MyBatis%E4%BA%8B%E5%8A%A1/">
+<link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
+
+<meta name="description" content="MyBatis框架入门五. MyBatis事务什么是事务事务的四大特性（ACID） 原子性(Atomicity)：   整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。   事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。  一致性(Correspondence)：   在事务开始之前和事务结束以后，数据库的完">
+<meta name="keywords" content="Java,MyBatis">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MyBatis框架入门五. MyBatis事务">
+<meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%BA%94-MyBatis%E4%BA%8B%E5%8A%A1&#x2F;index.html">
+<meta property="og:site_name" content="YoungTakhin">
+<meta property="og:description" content="MyBatis框架入门五. MyBatis事务什么是事务事务的四大特性（ACID） 原子性(Atomicity)：   整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。   事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。  一致性(Correspondence)：   在事务开始之前和事务结束以后，数据库的完">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+<meta property="og:updated_time" content="2019-12-03T11:04:16.058Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
+
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":null,"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"MyBatis","url":"http://alpac.top/MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%BA%94-MyBatis%E4%BA%8B%E5%8A%A1/","headline":"MyBatis框架入门五. MyBatis事务","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-11-19T07:04:34.000Z","dateModified":"2019-12-03T11:04:16.058Z","keywords":"Java,MyBatis","description":null,"publisher":{"@type":"Organization","name":"YoungTakhin","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/MyBatis%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8%E4%BA%94-MyBatis%E4%BA%8B%E5%8A%A1/"}}]</script>
+
+
+<link href="//fonts.googleapis.com/css?family=Fira+Code|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="/styles.6d727dade1159bc77736.css" rel="stylesheet">
+<link rel="stylesheet" href="/theme.8d4584423fa088e66b01.css">
+<script src="/config.fb75470201b0c48e7440.js"></script>
+
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
+
+
+<meta name="baidu-site-verification" content="sK3E1kllSJ" />
+
+</head>
+<body lang="zh-Hans">
+<is-a></is-a>
+<script src="/runtime.ee6f73bc31187f12810a.js"></script>
+<script src="/polyfills.14df1390f4da8e838f05.js"></script>
+<script src="/main.0c926d87f8cb6ab96db0.js"></script>
+</body>
+</html>
