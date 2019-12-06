@@ -2,26 +2,26 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<title>设计模式5 工厂方法模式 - 羊驼毛</title>
+<title>设计模式8 代理模式 - 羊驼毛</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://alpac.top/articles/57053/">
+<link rel="canonical" href="http://alpac.top/articles/426b71cf/">
 <link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
 
-<meta name="description" content="设计模式5 工厂方法模式工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual Constructor)模式或者多态工厂(Polymorphic Factory)模式，它是一种类创建型模式。 工厂方法模式定义定义一个创建产品对象的工厂接口，将产品对象的实际创建工作推迟到具体子工厂类当中。这满足创建型模式中所要求的“创建与使用相分离”的特点。我们把">
+<meta name="description" content="设计模式8 代理模式代理模式(Proxy Pattern 或 Surrogate Pattern)是一种对象结构型模式。 代理模式定义 代理模式： 给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。  代理模式和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。 和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。   代理模式优">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="website">
-<meta property="og:title" content="设计模式5 工厂方法模式">
-<meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;articles&#x2F;57053&#x2F;index.html">
+<meta property="og:title" content="设计模式8 代理模式">
+<meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;articles&#x2F;426b71cf&#x2F;index.html">
 <meta property="og:site_name" content="羊驼毛">
-<meta property="og:description" content="设计模式5 工厂方法模式工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual Constructor)模式或者多态工厂(Polymorphic Factory)模式，它是一种类创建型模式。 工厂方法模式定义定义一个创建产品对象的工厂接口，将产品对象的实际创建工作推迟到具体子工厂类当中。这满足创建型模式中所要求的“创建与使用相分离”的特点。我们把">
+<meta property="og:description" content="设计模式8 代理模式代理模式(Proxy Pattern 或 Surrogate Pattern)是一种对象结构型模式。 代理模式定义 代理模式： 给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。  代理模式和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。 和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。   代理模式优">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
-<meta property="og:updated_time" content="2019-12-03T11:04:16.074Z">
+<meta property="og:updated_time" content="2019-12-06T09:06:42.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"设计模式","url":"http://alpac.top/articles/57053.html","headline":"设计模式5 工厂方法模式","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-02T05:57:36.000Z","dateModified":"2019-12-03T11:04:16.074Z","keywords":"设计模式","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/57053.html"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"设计模式","url":"http://alpac.top/articles/426b71cf.html","headline":"设计模式8 代理模式","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-05T08:27:00.000Z","dateModified":"2019-12-06T09:06:42.158Z","keywords":"设计模式","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/426b71cf.html"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Fira+Code|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
