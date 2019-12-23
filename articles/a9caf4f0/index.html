@@ -2,26 +2,26 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<title>Java208道经典面试题目六. Java Web - 羊驼毛</title>
+<title>Spring框架入门4. Spring依赖注入 - 羊驼毛</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://alpac.top/articles/28500/">
+<link rel="canonical" href="http://alpac.top/articles/a9caf4f0/">
 <link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
 
-<meta name="description" content="Java208道经典面试题目六. Java Web64. jsp 和 servlet 有什么区别？ jsp经编译后就变成了Servlet.（JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码，Web容器将JSP的代码编译成JVM能够识别的java类） jsp更擅长表现于页面显示，servlet更擅长于逻辑控制。 Servlet中没有内置对象，Jsp中的内置对象都是必须">
-<meta name="keywords" content="Java">
+<meta name="description" content="Spring框架入门4. Spring依赖注入依赖注入依赖注入（Dependency Injection，缩写为DI）是 Spring 框架核心 IoC 的具体实现。我们的程序在编写时，通过控制反转，把对象的创建交给了 Spring，但是代码中不可能出现没有依赖的情况。 IoC 解耦只是降低他们的依赖关系，但不会消除。 在某个类中需要用到其他类的对象，由 Spring 为我们提供，我们只需要在配置">
+<meta name="keywords" content="Java,Spring">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Java208道经典面试题目六. Java Web">
-<meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;articles&#x2F;28500&#x2F;index.html">
+<meta property="og:title" content="Spring框架入门4. Spring依赖注入">
+<meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;articles&#x2F;a9caf4f0&#x2F;index.html">
 <meta property="og:site_name" content="羊驼毛">
-<meta property="og:description" content="Java208道经典面试题目六. Java Web64. jsp 和 servlet 有什么区别？ jsp经编译后就变成了Servlet.（JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码，Web容器将JSP的代码编译成JVM能够识别的java类） jsp更擅长表现于页面显示，servlet更擅长于逻辑控制。 Servlet中没有内置对象，Jsp中的内置对象都是必须">
+<meta property="og:description" content="Spring框架入门4. Spring依赖注入依赖注入依赖注入（Dependency Injection，缩写为DI）是 Spring 框架核心 IoC 的具体实现。我们的程序在编写时，通过控制反转，把对象的创建交给了 Spring，但是代码中不可能出现没有依赖的情况。 IoC 解耦只是降低他们的依赖关系，但不会消除。 在某个类中需要用到其他类的对象，由 Spring 为我们提供，我们只需要在配置">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
-<meta property="og:updated_time" content="2019-12-03T11:04:16.078Z">
+<meta property="og:updated_time" content="2019-12-23T07:10:18.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java208道经典面试题目","url":"http://alpac.top/articles/28500.html","headline":"Java208道经典面试题目六. Java Web","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-09-27T03:47:23.000Z","dateModified":"2019-12-03T11:04:16.078Z","keywords":"Java","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/28500.html"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Spring框架入门","url":"http://alpac.top/articles/a9caf4f0.html","headline":"Spring框架入门4. Spring依赖注入","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-23T04:55:41.000Z","dateModified":"2019-12-23T07:10:18.998Z","keywords":"Java,Spring","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/a9caf4f0.html"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Fira+Code|Noto+Sans+SC|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
