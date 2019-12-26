@@ -17,11 +17,11 @@
 <meta property="og:description" content="Spring框架入门4. Spring依赖注入依赖注入依赖注入（Dependency Injection，缩写为DI）是 Spring 框架核心 IoC 的具体实现。我们的程序在编写时，通过控制反转，把对象的创建交给了 Spring，但是代码中不可能出现没有依赖的情况。 IoC 解耦只是降低他们的依赖关系，但不会消除。 在某个类中需要用到其他类的对象，由 Spring 为我们提供，我们只需要在配置">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
-<meta property="og:updated_time" content="2019-12-23T07:25:11.134Z">
+<meta property="og:updated_time" content="2019-12-26T16:01:31.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Spring框架入门","url":"http://alpac.top/articles/a9caf4f0.html","headline":"Spring框架入门4. Spring依赖注入","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-23T04:55:41.000Z","dateModified":"2019-12-23T07:25:11.134Z","keywords":"Java,Spring","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/a9caf4f0.html"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Spring框架入门","url":"http://alpac.top/articles/a9caf4f0.html","headline":"Spring框架入门4. Spring依赖注入","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-23T04:55:41.000Z","dateModified":"2019-12-26T16:01:31.872Z","keywords":"Java,Spring","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/a9caf4f0.html"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Fira+Code|Noto+Sans+SC|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
@@ -30,7 +30,7 @@
 <style>.highlight ::selection{color:#fff}</style>
 <link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.f617ceba6152a2b3390a.css">
-<script src="/config.b57c41116a6b29fb12e5.js"></script>
+<script src="/config.f4d2cac42f6fa7271f8c.js"></script>
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-153799934-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-153799934-1');</script>

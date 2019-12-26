@@ -17,11 +17,11 @@
 <meta property="og:description" content="Java208道经典面试题目三. 多线程35. 并行和并发有什么区别？并行(parallel)：指在同一时刻，有多条指令在多个处理器上同时执行。所以无论从微观还是从宏观来看，二者都是一起执行的。  并发(concurrency)：指在同一时刻只能有一条指令执行，但多个进程指令被快速的轮换执行，使得在宏观上具有多个进程同时执行的效果，但在微观上并不是同时执行的，只是把时间分成若干段，使多个进程快速交">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
-<meta property="og:updated_time" content="2019-12-03T11:04:16.084Z">
+<meta property="og:updated_time" content="2019-12-26T15:59:36.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java208道经典面试题目","url":"http://alpac.top/articles/20688.html","headline":"Java208道经典面试题目三. 多线程","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-09-26T13:35:33.000Z","dateModified":"2019-12-03T11:04:16.084Z","keywords":"Java","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/20688.html"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java208道经典面试题目","url":"http://alpac.top/articles/20688.html","headline":"Java208道经典面试题目三. 多线程","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-09-26T13:35:33.000Z","dateModified":"2019-12-26T15:59:36.512Z","keywords":"Java","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/20688.html"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Fira+Code|Noto+Sans+SC|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
@@ -30,7 +30,7 @@
 <style>.highlight ::selection{color:#fff}</style>
 <link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.f617ceba6152a2b3390a.css">
-<script src="/config.b57c41116a6b29fb12e5.js"></script>
+<script src="/config.f4d2cac42f6fa7271f8c.js"></script>
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-153799934-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-153799934-1');</script>
