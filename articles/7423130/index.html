@@ -2,26 +2,26 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<title>Spring框架入门5. 基于XML的IoC案例 - 羊驼毛</title>
+<title>Spring框架入门5 基于XML的IoC案例 - 羊驼毛</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://alpac.top/articles/7423130/">
 <link rel="icon" type="image/x-icon" href="https://s2.ax1x.com/2019/11/24/MOwLcD.png">
 
-<meta name="description" content="Spring框架入门5. 基于XML的IoC案例 本案例结合 DBUtil 包，数据库使用 MySQL 实现查询所有用户的简单功能  环境搭建 创建数据库 spring-learn 并导入 SQL 脚本： 123456789create table account(    id int primary key auto_increment,    name varchar(40),    mone">
+<meta name="description" content="Spring框架入门5 基于XML的IoC案例 本案例结合 DBUtil 包，数据库使用 MySQL 实现查询所有用户的简单功能  环境搭建 创建数据库 spring-learn 并导入 SQL 脚本： 123456789create table account(    id int primary key auto_increment,    name varchar(40),    money">
 <meta name="keywords" content="Java,Spring">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spring框架入门5. 基于XML的IoC案例">
+<meta property="og:title" content="Spring框架入门5 基于XML的IoC案例">
 <meta property="og:url" content="http:&#x2F;&#x2F;alpac.top&#x2F;articles&#x2F;7423130&#x2F;index.html">
 <meta property="og:site_name" content="羊驼毛">
-<meta property="og:description" content="Spring框架入门5. 基于XML的IoC案例 本案例结合 DBUtil 包，数据库使用 MySQL 实现查询所有用户的简单功能  环境搭建 创建数据库 spring-learn 并导入 SQL 脚本： 123456789create table account(    id int primary key auto_increment,    name varchar(40),    mone">
+<meta property="og:description" content="Spring框架入门5 基于XML的IoC案例 本案例结合 DBUtil 包，数据库使用 MySQL 实现查询所有用户的简单功能  环境搭建 创建数据库 spring-learn 并导入 SQL 脚本： 123456789create table account(    id int primary key auto_increment,    name varchar(40),    money">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
-<meta property="og:updated_time" content="2019-12-26T16:01:35.311Z">
+<meta property="og:updated_time" content="2019-12-27T09:02:57.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-1257398142.cos.ap-guangzhou.myqcloud.com&#x2F;my.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Spring框架入门","url":"http://alpac.top/articles/7423130.html","headline":"Spring框架入门5. 基于XML的IoC案例","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-24T09:53:23.000Z","dateModified":"2019-12-26T16:01:35.311Z","keywords":"Java,Spring","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/7423130.html"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"url":"http://alpac.top","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","description":"杨得轩的博客","author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Spring框架入门","url":"http://alpac.top/articles/7423130.html","headline":"Spring框架入门5 基于XML的IoC案例","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg","datePublished":"2019-12-24T09:53:23.000Z","dateModified":"2019-12-27T09:02:57.441Z","keywords":"Java,Spring","description":"杨得轩的博客","publisher":{"@type":"Organization","name":"羊驼毛","logo":{"@type":"ImageObject","url":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"}},"author":{"@type":"Person","name":"Yang Dexuan","description":"A developer from northeast China, with the Northeast bold.","image":"https://img-1257398142.cos.ap-guangzhou.myqcloud.com/my.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://alpac.top/articles/7423130.html"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Fira+Code|Noto+Sans+SC|Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
@@ -30,7 +30,7 @@
 <style>.highlight ::selection{color:#fff}</style>
 <link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.94adbc7c99e582c3f4e4.css">
-<script src="/config.802eb1f39b20ab8c4a30.js"></script>
+<script src="/config.764e1276b51bfc5d0371.js"></script>
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-153799934-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-153799934-1');</script>
